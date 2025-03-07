@@ -1,0 +1,3 @@
+clk_pll_clk_wiz.v,verilog,xil_defaultlib,../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen/clk_pll_clk_wiz.v,incdir="../../../ipstatic"incdir="../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen"
+clk_pll.v,verilog,xil_defaultlib,../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen/clk_pll.v,incdir="../../../ipstatic"incdir="../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Mar  7 22:52:43 2025
+# Process ID: 52288
+# Current directory: E:/projects_2024/Loong_Team/chiplab_try/fpga/nscscc-team/run_vivado/project/loongson.runs/tagv_sram_synth_1
+# Command line: vivado.exe -log tagv_sram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tagv_sram.tcl
+# Log file: E:/projects_2024/Loong_Team/chiplab_try/fpga/nscscc-team/run_vivado/project/loongson.runs/tagv_sram_synth_1/tagv_sram.vds
+# Journal file: E:/projects_2024/Loong_Team/chiplab_try/fpga/nscscc-team/run_vivado/project/loongson.runs/tagv_sram_synth_1\vivado.jou
+# Running On: Super-EvilLoong, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 10, Host memory: 16793 MB
+#-----------------------------------------------------------
+source tagv_sram.tcl -notrace

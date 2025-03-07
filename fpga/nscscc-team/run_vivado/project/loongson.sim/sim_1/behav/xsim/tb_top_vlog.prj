@@ -1,0 +1,45 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../IP/myCPU/open-la500" --include "../../../../../../../../chip/soc_demo/nscscc-team" --include "../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen" --include "../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/axi_crossbar_2x3/gen/hdl" --include "../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/axi_clock_converter/gen/hdl" \
+"../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen/clk_pll_clk_wiz.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/clk_pll/gen/clk_pll.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/axi_ram/gen/sim/axi_ram.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/axi_crossbar_2x3/gen/sim/axi_crossbar_2x3.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/xilinx_ip/axi_clock_converter/gen/sim/axi_clock_converter.v" \
+"../../../../loongson.ip_user_files/ip/tagv_sram/sim/tagv_sram.v" \
+"../../../../loongson.ip_user_files/ip/data_bank_sram/sim/data_bank_sram.v" \
+"../../../../../../../../IP/myCPU/open-la500/addr_trans.v" \
+"../../../../../../../../IP/myCPU/open-la500/alu.v" \
+"../../../../../../../../IP/myCPU/open-la500/axi_bridge.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/axi_wrap/axi_wrap.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/ram_wrap/axi_wrap_ram.v" \
+"../../../../../../../../IP/myCPU/open-la500/btb.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/CONFREG/confreg.v" \
+"../../../../../../../../IP/myCPU/open-la500/csr.v" \
+"../../../../../../../../IP/myCPU/open-la500/dcache.v" \
+"../../../../../../../../IP/myCPU/open-la500/div.v" \
+"../../../../../../../../IP/myCPU/open-la500/exe_stage.v" \
+"../../../../../../../../IP/myCPU/open-la500/icache.v" \
+"../../../../../../../../IP/myCPU/open-la500/id_stage.v" \
+"../../../../../../../../IP/myCPU/open-la500/if_stage.v" \
+"../../../../../../../../IP/myCPU/open-la500/mem_stage.v" \
+"../../../../../../../../IP/myCPU/open-la500/mul.v" \
+"../../../../../../../../IP/myCPU/open-la500/mycpu_top.v" \
+"../../../../../../../../IP/myCPU/open-la500/perf_counter.v" \
+"../../../../../../../../IP/myCPU/open-la500/regfile.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/uart_debug/rst_sync.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/soc_axi_lite_top.v" \
+"../../../../../../../../IP/AXI_SRAM_BRIDGE/soc_axi_sram_bridge.v" \
+"../../../../../../../../IP/myCPU/open-la500/tlb_entry.v" \
+"../../../../../../../../IP/myCPU/open-la500/tools.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/uart_debug/uart.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/uart_debug/uart_debug.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/uart_debug/uart_debug_axi.v" \
+"../../../../../../../../chip/soc_demo/nscscc-team/uart_debug/uart_wrap.v" \
+"../../../../../../../../IP/myCPU/open-la500/wb_stage.v" \
+"../../../../../testbench/mycpu_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

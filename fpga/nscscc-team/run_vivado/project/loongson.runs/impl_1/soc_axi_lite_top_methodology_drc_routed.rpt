@@ -1,0 +1,192 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri Mar  7 23:12:13 2025
+| Host         : Super-EvilLoong running 64-bit major release  (build 9200)
+| Command      : report_methodology -file soc_axi_lite_top_methodology_drc_routed.rpt -pb soc_axi_lite_top_methodology_drc_routed.pb -rpx soc_axi_lite_top_methodology_drc_routed.rpx
+| Design       : soc_axi_lite_top
+| Device       : xc7a200tfbg676-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 25
++-----------+----------+-------------------------------------------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                                                           | Violations |
++-----------+----------+-------------------------------------------------------------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                                                                          | 1          |
+| SYNTH-5   | Warning  | Mapped onto distributed RAM because of timing constraints                                             | 8          |
+| TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1          |
+| TIMING-24 | Warning  | Overridden Max delay datapath only                                                                    | 10         |
+| TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 2          |
+| RTGT-1    | Advisory | RAM retargeting possibility                                                                           | 3          |
++-----------+----------+-------------------------------------------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell fpga_pll.u_rst_cpu/FSM_onehot_state[5]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) fpga_pll.u_rst_cpu/delay_reg[0]/CLR, fpga_pll.u_rst_cpu/delay_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-5#1 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r1_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#2 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r1_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#3 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r1_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#4 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r1_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#5 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r2_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#6 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r2_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#7 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r2_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#8 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_cpu/dcache/way_d_reg_reg_r2_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-24#1 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 2 in the Timing Constraints window in Vivado IDE) between clocks sys_clk_clk_pll and cpu_clk_clk_pll overrides a set_max_delay -datapath_only (position 20). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#2 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 2 in the Timing Constraints window in Vivado IDE) between clocks sys_clk_clk_pll and cpu_clk_clk_pll overrides a set_max_delay -datapath_only (position 24). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#3 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 2 in the Timing Constraints window in Vivado IDE) between clocks sys_clk_clk_pll and cpu_clk_clk_pll overrides a set_max_delay -datapath_only (position 26). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#4 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 2 in the Timing Constraints window in Vivado IDE) between clocks sys_clk_clk_pll and cpu_clk_clk_pll overrides a set_max_delay -datapath_only (position 32). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#5 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 2 in the Timing Constraints window in Vivado IDE) between clocks sys_clk_clk_pll and cpu_clk_clk_pll overrides a set_max_delay -datapath_only (position 34). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#6 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 3 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk_clk_pll and sys_clk_clk_pll overrides a set_max_delay -datapath_only (position 16). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#7 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 3 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk_clk_pll and sys_clk_clk_pll overrides a set_max_delay -datapath_only (position 18). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#8 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 3 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk_clk_pll and sys_clk_clk_pll overrides a set_max_delay -datapath_only (position 22). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#9 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 3 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk_clk_pll and sys_clk_clk_pll overrides a set_max_delay -datapath_only (position 28). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#10 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 3 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk_clk_pll and sys_clk_clk_pll overrides a set_max_delay -datapath_only (position 30). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A False Path timing constraint is set between synchronous clocks cpu_clk_clk_pll and sys_clk_clk_pll (see constraint position 3 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#2 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A False Path timing constraint is set between synchronous clocks sys_clk_clk_pll and cpu_clk_clk_pll (see constraint position 2 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+RTGT-1#1 Advisory
+RAM retargeting possibility  
+Identified 12 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 4 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_cpu/addr_trans/tlb_entry/tlb_d0_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_d1_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r2_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r2_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r2_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_plv1_reg_r2_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_plv1_reg_r2_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_v0_reg_r2_0_31_0_0
+u_cpu/addr_trans/tlb_entry/tlb_v1_reg_r2_0_31_0_0
+Related violations: <none>
+
+RTGT-1#2 Advisory
+RAM retargeting possibility  
+Identified 12 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 4 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_cpu/addr_trans/tlb_entry/tlb_d0_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_d1_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r3_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r3_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r3_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_plv1_reg_r3_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_plv1_reg_r3_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_v0_reg_r3_0_31_0_0
+u_cpu/addr_trans/tlb_entry/tlb_v1_reg_r3_0_31_0_0
+Related violations: <none>
+
+RTGT-1#3 Advisory
+RAM retargeting possibility  
+Identified 6 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 2 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r1_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat0_reg_r1_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r1_0_31_0_0,
+u_cpu/addr_trans/tlb_entry/tlb_mat1_reg_r1_0_31_1_1,
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r1_0_31_0_0
+u_cpu/addr_trans/tlb_entry/tlb_plv0_reg_r1_0_31_1_1
+Related violations: <none>
+
+
